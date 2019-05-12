@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int hexa(char str[]);
+int htoi(char str[]);
 int main(void) {
     char str[1024];
     int i, c;
     for (i=0; (c = getchar()) != '\n'; i++)
         str[i] = c;
     str[i] = '\0';
-    printf("%s: %d\n", str, hexa(str));
+    printf("%s: %d\n", str, htoi(str));
     return EXIT_SUCCESS;
 }
 
-int hexa(char str[]) {
+int htoi(char str[]) {
     int i;
     int c, num;
     num = 0;
